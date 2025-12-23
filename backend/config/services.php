@@ -34,5 +34,11 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+   'spotify' => [
+        'client_id' => env('534c8e71c46c4e8c8c9ae591ae9b1ac9'),
+        'client_secret' => env('971de882b9c94cfbbda9bc49dfda9525'),
+    ],
+
+
 
 ];
