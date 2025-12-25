@@ -1,145 +1,188 @@
-# Contratação de Artistas
+🎤 Artist Hiring Platform
 
-Projeto fullstack desenvolvido como teste técnico, com integração à API do Spotify para busca de artistas e simulação de contratação.
+This project was developed as part of the EnterScience Internship Technical Test – 2025.
+The application allows users to search for artists, create contracts for private events, and manage previously submitted contracts.
 
----
+🧩 Project Overview
 
-##  Tecnologias Utilizadas
+The system simulates a platform where a user can:
 
-### Backend
+Search for available artists
 
-* PHP 8+
-* Laravel
-* PostgreSQL
-* pgAdmin
-* API Spotify
+Select an artist and fill out a contract form
 
-### Frontend
+Submit the contract
 
-* React
-* TypeScript
-* React Router DOM
-* Fetch API
+View previously created contracts
 
----
+The application is divided into frontend and backend, following good separation of concerns.
 
-## Estrutura do Projeto
+🛠️ Technologies Used
+Frontend
 
-```
+React (Vite)
+
+TypeScript
+
+React Router DOM
+
+CSS (custom styling, responsive layout)
+
+Backend
+
+Laravel
+
+PostgreSQL
+
+REST API
+
+📁 Project Structure
 ContratacaoArtistas_teste/
 │
-├── backend/   # API Laravel
-└── frontend/  # Aplicação React
-```
+├── backend/        # Laravel API
+│
+├── frontend/       # React application
+│
+└── README.md
 
----
+⚙️ Backend Setup (Laravel)
+1️⃣ Requirements
 
-## Como Rodar o Projeto
+PHP >= 8.2
 
-### Backend (Laravel)
+Composer
 
-1. Acesse a pasta do backend:
+PostgreSQL
 
-```bash
+Laravel CLI
+
+2️⃣ Installation
 cd backend
-```
-
-2. Instale as dependências:
-
-```bash
 composer install
-``
 
-3. Configure o arquivo `.env`:
+3️⃣ Environment Configuration
 
-```env
+Create the .env file:
+
+cp .env.example .env
+
+
+Configure your PostgreSQL credentials in .env:
+
 DB_CONNECTION=pgsql
 DB_HOST=localhost
 DB_PORT=5432
-DB_DATABASE=contratacao_artistas
-DB_USERNAME=postgres
-DB_PASSWORD=sua_senha
+DB_DATABASE=your_database
+DB_USERNAME=your_user
+DB_PASSWORD=your_password
 
-SPOTIFY_CLIENT_ID=seu_client_id
-SPOTIFY_CLIENT_SECRET=seu_client_secret
-```
-
-4. Gere a chave da aplicação:
-
-```bash
+4️⃣ Generate App Key
 php artisan key:generate
-```
 
-5. Rode as migrations:
-
-```bash
+5️⃣ Run Migrations
 php artisan migrate
-```
 
-6. Inicie o servidor:
-
-```bash
+6️⃣ Start Backend Server
 php artisan serve
-```
 
-Backend disponível em:
- `http://localhost:8000`
 
----
+Backend will be available at:
 
-### Frontend (React)
+http://localhost:8000
 
-1. Acesse a pasta do frontend:
+⚙️ Frontend Setup (React)
+1️⃣ Requirements
 
-```bash
+Node.js >= 18
+
+npm
+
+2️⃣ Installation
 cd frontend
-```
-
-2. Instale as dependências:
-
-```bash
 npm install
-```
 
-3. Inicie o projeto:
-
-```bash
-npm start
-```
-
-Frontend disponível em:
- `http://localhost:3000`
-
----
-
-## Funcionalidades
-
-* Buscar artistas via Spotify
-* Listar artistas encontrados
-* Exibir informações do artista
-* Feedback visual com Alert
-* Tipagem completa com TypeScript
-
----
-
-## Decisões Técnicas
-
-* Backend separado do frontend
-* API REST consumida via Fetch
-* Uso de FormRequest para validações
-* Componentização no React
-* Organização por responsabilidade
-
----
-
-##  Autor
-
-Desenvolvido por **Matheus** 
-
----
-
-## 📌 Observações
-* Este projeto foi desenvolvido como teste técnico para a vaga de estágio em desenvolvimento.
+3️⃣ Start Frontend
+npm run dev
 
 
-Projeto focado em clareza de código, organização e boas práticas, seguindo padrões comuns de mercado para aplicações fullstack.
+Frontend will be available at:
+
+http://localhost:5173
+
+🔌 API Endpoints
+🎨 Artists (Mocked)
+GET /api/artists
+
+
+Returns a list of available artists.
+
+📄 Contracts
+POST /api/contracts
+
+
+Creates a new contract.
+
+GET /api/contracts
+
+
+Returns all submitted contracts.
+
+🖥️ Application Pages
+
+Home
+
+Artist carousel
+
+Artist search
+
+Navigation to contract form
+
+Contract Form
+
+Required fields validation
+
+Artist selection
+
+Submission handling
+
+Success Page
+
+Confirmation message
+
+Navigation options
+
+Contracts List
+
+Displays all saved contracts
+
+Interactive and styled list
+
+✨ Extra Features Implemented
+
+Responsive layout
+
+Animations and transitions
+
+Visual feedback for loading and confirmation
+
+Floating action button for quick access
+
+Clean and semantic component structure
+
+🚧 Challenges & Notes
+
+Spotify API integration was initially considered, but mock data was implemented to ensure stability and delivery within the deadline.
+
+Backend persistence uses PostgreSQL to add extra points according to the challenge description.
+
+👨‍💻 Author
+
+Developed by Matheus
+GitHub repository is public as requested.
+
+📬 Contact
+
+For any questions regarding this test, feel free to reach out.
+
+✅ Project ready for evaluation
+Thank you for the opportunity!
