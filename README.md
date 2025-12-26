@@ -94,7 +94,7 @@ Antes de iniciar, certifique-se de ter instalado:
 - npm run dev
 - http://localhost:5173
 
+### Autor
+# Matheus Guarnieri Dos Anjos
+# Fins para estágio
 
-
-```bash
-cd backend
